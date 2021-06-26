@@ -1,0 +1,388 @@
+@import 'config';
+
+body {
+    color: $very-dark-desaturated-blue;
+    font-size: 18px;
+    font-family: $font-barlow;
+    text-align: center;
+    background-color: hsl(15, 100%, 99%);
+
+    h1, h2, h3 {
+        font-family: $font-fraunces;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+
+header {
+    background-image: url(../../images/mobile/image-header.jpg);
+    min-height: 70vh;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+
+    h1, a {
+        color: $white;
+    }
+
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 20px;
+
+        .logo {
+            width: 100px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+
+        .burger {
+            width: 22px;
+            height: 16px;
+            cursor: pointer;
+
+        }
+
+        .close {
+            display: none;
+            color: $white;
+            
+        }
+
+        .close.active {
+            display: block;
+        }
+    }
+
+
+
+   nav {
+       display: none;
+       position: absolute;
+       top: 20%;
+       left: 50%;
+       transform: translateX(-50%);
+       background-color: $white;
+       width: 90%;
+       height: 55%;
+       z-index: 1;
+       font-size: 0.9em;
+
+       ul {
+           height: 100%;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           
+       }
+      
+       li {
+           list-style: none;
+       }
+
+       a {
+           color: $grayish-blue;
+       }
+
+       .contact {
+           text-transform: uppercase;
+           font-family: $font-fraunces;
+           color: $very-dark-desaturated-blue;
+           font-size: 0.8em;
+           background-color: $yellow;
+           display: inline-block;
+           height: 50px;
+           width: 120px;
+           padding: 17px 0;
+           border-radius: 30px;
+       }
+   }
+
+   nav.active {
+       display: block;
+   }
+
+   h1 {
+       text-transform: uppercase;
+       letter-spacing: 7px;
+       font-size: 1.8em;
+       position: absolute;
+       top: 25%;
+       width: 100%;
+
+   }
+
+   .arrow {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translateX(-50%);
+   }
+
+
+
+}
+
+
+
+.grid-container {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    
+
+    .product-content-container {
+        padding: 2rem 1rem;
+        
+    
+        h2 {
+            padding: 1rem 0.5rem;
+            font-size: 2rem;
+    
+        }
+        
+        
+        p {
+            padding: 0.5rem;
+            line-height: 1.7;
+            color: $dark-grayis-blue;
+        }
+    
+        .button-wrap {
+            height: 40px;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            a {
+                display: inline-block;
+                // margin: 1rem 0;
+                font-family: $font-fraunces;
+                text-transform: uppercase;
+                font-size: 0.9em;
+                color: $very-dark-desaturated-blue;
+                
+    
+                
+            }
+    
+            %underline {
+                background-position: bottom;
+                background-size: 100% 30%;
+                background-repeat: no-repeat;
+    
+            }
+    
+            .yellow-underline {
+                background-image: linear-gradient(90deg, $yellow, $yellow);
+                @extend %underline;
+    
+            }
+    
+            .red-underline {
+                @extend %underline;
+                background-image: linear-gradient(90deg, $soft-red, $soft-red);
+    
+            }
+    
+        }
+        
+    }
+    
+
+
+
+}
+
+
+.product-gallery-container {
+    width: 100%;
+    position: relative;
+    
+
+
+
+    .product-intro-container {
+       
+
+        h2 {
+            padding: 1em 0.5em;
+
+        }
+
+        p {
+            padding: 0 1.3em;
+            font-size: 0.8em;
+            line-height: 1.7;
+        }
+    }
+
+}
+
+@mixin set-product-bg-img($img) {
+    background-image: $img;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 80vh;
+
+    position: relative;
+
+}
+
+.graphic-design-bg {
+    
+    @include set-product-bg-img((url(../../images/mobile/image-graphic-design.jpg)));
+
+    .graphic-design-txt {
+        position: absolute;
+        top: 55%;
+        color: $dark-desaturated-cyan;
+
+    }
+    
+    
+}
+
+.photography-bg {
+    @include set-product-bg-img(url(../../images/mobile/image-photography.jpg));
+
+
+    .photography-txt {
+        color: $dark-blue;
+        position: absolute;
+        top: 55%;
+    }
+
+}
+
+
+
+
+.testi-container {
+    padding: 2em 0;
+
+    h3 {
+        padding: 1.5em;
+        color: $grayish-blue;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 5px;
+        
+    }
+
+
+    .client-testi-container {
+        padding: 10px 20px;
+
+        
+
+        img {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            margin: 10px 0;
+        }
+
+        p {
+            padding: 10px 0;
+            color: $very-dark-grayish-blue;
+            line-height: 1.7;
+        }
+
+        .signature {
+            padding: 10px 0;
+
+            span {
+                display: block;
+                padding: 5px 0;
+            }
+
+            .client-name {
+                font-family: $font-fraunces;
+            }
+
+            .client-title {
+                font-size: 0.8em;
+                color: $grayish-blue;
+            }
+        }
+    }
+
+
+
+}
+
+
+.img-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .desktop-grid-gallery-item {
+        display: none;
+    }
+}
+
+
+footer {
+    padding: 2em 0;
+    color: $dark-moderate-cyan;
+    background-color: lighten($dark-moderate-cyan, 30);
+
+    .footer-logo {
+        margin: 20px 0;
+        width: 154px;
+        height: 30px;
+
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        padding: 20px 0;
+        
+    }
+
+    .contact {
+        width: 70%;   
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .attribution {
+        padding: 20px 10px 0 10px;
+        font-size: 0.8em;
+
+        a {
+            color: $dark-desaturated-cyan;
+        }
+    }
+
+   
+}
+
+@import 'desktop';
