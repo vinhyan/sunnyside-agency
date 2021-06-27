@@ -1,6 +1,7 @@
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('nav');
-const close = document.querySelector('.close');
+const arrow = document.querySelector('.arrow');
+const main = document.querySelector('main');
 
 
 
@@ -8,16 +9,14 @@ const app = () => {
 
     burger.addEventListener('click', () => {
         nav.classList.toggle('active');
-        // burger.style.display = 'none';
-        // close.classList.add('active');
-
+    
 
     })
 
-    close.addEventListener('click', () => {
-        // nav.classList.remove('active');
-        // burger.style.display = 'block';
-        // close.classList.remove('active');
+    arrow.addEventListener('click', () => {
+        console.log('hi')
+        main.scrollIntoView({behavior: "smooth"})
+
     })
 
 

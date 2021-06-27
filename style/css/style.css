@@ -22,7 +22,7 @@ body a {
 
 header {
   background-image: url(../../images/mobile/image-header.jpg);
-  min-height: 70vh;
+  min-height: 100vh;
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -115,11 +115,25 @@ header h1 {
   width: 100%;
 }
 
-header .arrow {
+header .arrow-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+header .arrow-wrap .arrow {
+  cursor: pointer;
+  animation: top-to-bottom 0.5s ease-in forwards infinite alternate;
+}
+
+@keyframes top-to-bottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20%);
+  }
 }
 
 .grid-container img {
@@ -178,16 +192,6 @@ header .arrow {
   position: relative;
 }
 
-.product-gallery-container .product-intro-container h2 {
-  padding: 1em 0.5em;
-}
-
-.product-gallery-container .product-intro-container p {
-  padding: 0 1.3em;
-  font-size: 0.8em;
-  line-height: 1.7;
-}
-
 .graphic-design-bg {
   background-image: url(../../images/mobile/image-graphic-design.jpg);
   background-size: cover;
@@ -198,10 +202,26 @@ header .arrow {
   position: relative;
 }
 
+.graphic-design-bg h2 {
+  padding: 1em 0.5em;
+  width: 100%;
+}
+
+.graphic-design-bg p {
+  padding: 0 1.3em;
+  font-size: 0.8em;
+  line-height: 1.7;
+  width: 100%;
+}
+
 .graphic-design-bg .graphic-design-txt {
   position: absolute;
-  top: 55%;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
   color: #25564b;
+  width: 400px;
+  max-width: 100%;
 }
 
 .photography-bg {
@@ -214,10 +234,26 @@ header .arrow {
   position: relative;
 }
 
+.photography-bg h2 {
+  padding: 1em 0.5em;
+  width: 100%;
+}
+
+.photography-bg p {
+  padding: 0 1.3em;
+  font-size: 0.8em;
+  line-height: 1.7;
+  width: 100%;
+}
+
 .photography-bg .photography-txt {
   color: #19536b;
   position: absolute;
-  top: 55%;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  max-width: 100%;
 }
 
 .testi-container {

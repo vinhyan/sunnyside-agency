@@ -20,7 +20,7 @@ body {
 
 header {
     background-image: url(../../images/mobile/image-header.jpg);
-    min-height: 70vh;
+    min-height: 100vh;
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -120,22 +120,35 @@ header {
        top: 25%;
        width: 100%;
 
-    
-       
-
    }
 
-   .arrow {
+   .arrow-wrap {
        position: absolute;
        top: 50%;
        left: 50%;
        transform: translateX(-50%);
-   }
 
+       .arrow {
+        cursor: pointer;
+        animation: top-to-bottom 0.5s ease-in forwards infinite alternate;
+        }
+
+   }
 
 
 }
 
+@keyframes top-to-bottom {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(20%);
+    }
+
+    
+}
 
 
 .grid-container {
@@ -216,23 +229,6 @@ header {
     position: relative;
     
 
-
-
-    .product-intro-container {
-       
-
-        h2 {
-            padding: 1em 0.5em;
-
-        }
-
-        p {
-            padding: 0 1.3em;
-            font-size: 0.8em;
-            line-height: 1.7;
-        }
-    }
-
 }
 
 @mixin set-product-bg-img($img) {
@@ -242,8 +238,20 @@ header {
     background-position: center;
     width: 100%;
     height: 80vh;
-
     position: relative;
+
+    h2 {
+        padding: 1em 0.5em;
+        width: 100%;
+
+    }
+
+    p {
+        padding: 0 1.3em;
+        font-size: 0.8em;
+        line-height: 1.7;
+        width: 100%;
+    }
 
 }
 
@@ -253,8 +261,12 @@ header {
 
     .graphic-design-txt {
         position: absolute;
-        top: 55%;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
         color: $dark-desaturated-cyan;
+        width: 400px;
+        max-width: 100%;
 
     }
     
@@ -268,7 +280,13 @@ header {
     .photography-txt {
         color: $dark-blue;
         position: absolute;
-        top: 55%;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+        max-width: 100%;
+        
+    
     }
 
 }
