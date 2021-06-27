@@ -280,7 +280,7 @@ header .arrow {
   display: block;
 }
 
-.img-gallery .desktop-grid-gallery-item {
+.img-gallery-desktop {
   display: none;
 }
 
@@ -303,8 +303,18 @@ footer ul {
   padding: 20px 0;
 }
 
+footer .footer-menu {
+  width: 400px;
+  max-width: 80%;
+}
+
+footer .footer-menu a {
+  color: #458c7e;
+}
+
 footer .contact {
-  width: 70%;
+  width: 200px;
+  max-width: 50%;
 }
 
 footer li {
@@ -325,6 +335,10 @@ footer .attribution a {
     background-image: url(../../images/desktop/image-header.jpg);
     background-position: bottom;
     object-fit: cover;
+  }
+  header .top-bar .logo {
+    width: 124px;
+    height: 24px;
   }
   header .burger {
     display: none;
@@ -347,9 +361,11 @@ footer .attribution a {
   }
   header nav .contact {
     background-color: white;
+    transition: 0.5s ease;
   }
-  header nav .close {
-    display: none;
+  header nav .contact:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
   }
   .grid-container {
     display: grid;
@@ -380,10 +396,23 @@ footer .attribution a {
     background-image: url(../../images/desktop/image-photography.jpg);
     height: 100%;
   }
+  .client-testi-desktop {
+    display: flex;
+  }
+  .img-gallery {
+    display: none;
+  }
   .img-gallery img {
     display: none;
   }
   .img-gallery .desktop-grid-gallery-item {
     display: block;
+  }
+  .img-gallery-desktop {
+    width: 100%;
+    display: flex;
+  }
+  .img-gallery-desktop img {
+    width: 25%;
   }
 }

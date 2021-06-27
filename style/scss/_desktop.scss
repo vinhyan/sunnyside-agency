@@ -3,7 +3,13 @@
         background-image: url(../../images/desktop/image-header.jpg);
         background-position: bottom;
         object-fit: cover;
-        // background-size: 100%;
+
+        .top-bar {
+            .logo {
+                width: 124px;
+                height: 24px;
+            }
+        }
 
 
         .burger {
@@ -22,22 +28,24 @@
                flex-direction: row;
                align-items: center;
                justify-content: space-between;
-               
-
            }
 
            a {
-               color: $white;;
+               color: $white;
+            
            }
 
            .contact {
                background-color: $white;
+               transition: 0.5s ease;
            }
 
-           .close {
-               display: none;
-           }
-            
+           .contact:hover {
+               background-color: rgba($white, 0.5);
+               color: $white;
+
+            }
+
         }
     }
 
@@ -83,13 +91,28 @@
 
     }
 
+    .client-testi-desktop {
+        display: flex;
+    }
+
     .img-gallery {
+        display: none;
         img {
             display: none;
         }
 
         .desktop-grid-gallery-item {
             display: block;
+        }
+    }
+
+    .img-gallery-desktop {
+        width: 100%;
+        display: flex;
+
+        img {
+            width: 25%;
+            
         }
     }
 

@@ -104,6 +104,8 @@ header {
            padding: 17px 0;
            border-radius: 30px;
        }
+
+      
    }
 
    nav.active {
@@ -117,6 +119,9 @@ header {
        position: absolute;
        top: 25%;
        width: 100%;
+
+    
+       
 
    }
 
@@ -283,6 +288,8 @@ header {
         
     }
 
+    
+
 
     .client-testi-container {
         padding: 10px 20px;
@@ -339,9 +346,11 @@ header {
         display: block;
     }
 
-    .desktop-grid-gallery-item {
-        display: none;
-    }
+    
+}
+
+.img-gallery-desktop {
+    display: none;
 }
 
 
@@ -365,8 +374,19 @@ footer {
         
     }
 
+    .footer-menu {
+        width: 400px;
+        max-width: 80%;
+
+        a {
+            color: $dark-moderate-cyan;
+        }
+    }
+
     .contact {
-        width: 70%;   
+        width: 200px;   
+        max-width: 50%;
+    
     }
 
     li {
@@ -380,7 +400,11 @@ footer {
         a {
             color: $dark-desaturated-cyan;
         }
+
+        
     }
+
+   
 
    
 }
